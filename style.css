@@ -1,0 +1,234 @@
+body {
+  /* 画面の幅いっぱいに設定 */
+  width: 100vw;
+  /* 画面の高さ（ツールバー等を除いた「今見えている高さ」）に設定 */
+  height: 100dvh;
+  /* スクロールを禁止する */
+  margin: 0;
+  overflow: hidden;
+  /* 要素のサイズ計算を分かりやすくする */
+  box-sizing: border-box;
+  text-align: center;
+  background-color: black;
+  font-family: "Sippori Mincho", "游明朝", "Yu Mincho", serif;
+}
+
+.overlay {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100dvh;
+  z-index: 9999;
+  opacity: 0;
+  background-color: black;
+  pointer-events: none;
+  transition: opacity 0.8s ease;
+}
+
+.hidden {
+  opacity: 0
+}
+
+.is_black {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.title_img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.loading {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s, display 0.3s allow-discrete;
+}
+
+.start_game {
+  width: 80%;
+  height: 80px;
+  color: #eaeaea;
+  font-weight: 700;
+  font-size: 32px;
+  letter-spacing: 0.15em;
+  background: linear-gradient(180deg,
+      #5a0f14 0%,
+      #2a0507 100%);
+  border: 1px solid #7a1c20;
+  border-radius: 24px;
+  box-shadow:
+    0 0 12px rgba(160, 0, 0, 0.4),
+    inset 0 0 8px rgba(0, 0, 0, 0.8);
+  position: absolute;
+  top: 560px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "游明朝", "Yu Mincho", serif;
+}
+
+.start_game:active {
+  transform: translate(-50%, -50%) scale(0.97);
+  box-shadow:
+    inset 0 0 18px rgba(0, 0, 0, 1),
+    0 0 6px rgba(120, 0, 0, 0.5);
+}
+
+
+.game {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: gray;
+  align-items: center;
+}
+
+.not_active {
+  display: none;
+}
+
+.active {
+  display: flex;
+}
+
+.San {
+  color: #fff;
+}
+
+
+#currentStage {
+  color: #fff;
+}
+
+#header {
+  width: 100%;
+  height: 10%;
+  background-color: black;
+  padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+#mainImage {
+  width: 100%;
+  height: 50%;
+}
+
+.bg-Train {
+  background: url(bg-Train.png);
+  background-size: cover;
+  position: relative;
+}
+
+.bg-Glitch {
+  background: url(bg-Glitch.png);
+  background-size: cover;
+  position: relative;
+
+}
+
+.bg-Stage1 {
+  background: url(bg-Stage1.png);
+  background-size: cover;
+  position: relative;
+
+}
+
+.bg-Stage2 {
+  background: url(bg-Stage2.png);
+  background-size: cover;
+  position: relative;
+
+}
+
+.bg-Stage3 {
+  background: url(bg-Stage3.png);
+  background-size: cover;
+  position: relative;
+
+}
+
+.bg-Stage4 {
+  background: url(bg-Stage4.png);
+  background-size: cover;
+  position: relative;
+}
+
+.bg-Stage5 {
+  background: url(bg-Stage5.png);
+  background-size: cover;
+  position: relative;
+
+}
+
+.bg-aliveEnding {
+  background: url(bg-aliveEnding.png) center center;
+  background-size: cover;
+  position: relative;
+
+}
+
+@keyframes fadeInSlide {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+.hidden {
+  opacity: 0 !important;
+}
+
+.character {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 100%;
+  height: 90%;
+  transform: translateX(-50%);
+  object-fit: contain;
+  transition: opacity 0.5s;
+  opacity: 0;
+}
+
+.char-appear {
+  animation: fadeInSlide 0.6s ease-out forwards;
+}
+
+#textForm {
+  width: 92%;
+  height: 40%;
+  background-color: #fff;
+  border: 1px solid #fff;
+  border-radius: 16px;
+  opacity: .5;
+  margin: 8px auto;
+  padding: 4px 8px;
+  text-align: left;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#textForm button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 16px;
+  width: 100%;
+  height: 20%;
+  font-family: "Sippori Mincho", "游明朝", "Yu Mincho", serif;
+  font-size: 18px;
+  font-weight: bold;
+}
