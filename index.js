@@ -480,14 +480,15 @@ function choiceResult() {
 }
 
 function checkSan() {
+  const chara = getCharaImage();
   if (currentSan <= 0) {
     currentStageId = "lostEnding";
     blackOut();
+    chara.classList.add("hidden");
     mode = "story";
   } else {
     currentStageId = "aliveEnding";
     blackOut();
-    const chara = getCharaImage();
     chara.classList.add("hidden");
     mode = "story";
   }

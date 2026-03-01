@@ -170,7 +170,13 @@ body {
   background: url(bg-aliveEnding.png) center center;
   background-size: cover;
   position: relative;
+}
 
+
+.bg-lostEnding {
+  background: url(bg-lostEnding.png) center center;
+  background-size: cover;
+  position: relative;
 }
 
 @keyframes fadeInSlide {
