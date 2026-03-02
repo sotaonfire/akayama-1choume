@@ -354,7 +354,7 @@ function changeBg() {
   console.log(mainImage.classList);
 }
 
-let currentStageId = "Stage5";
+let currentStageId = "Train";
 let currentSan = 100;
 let mode = "story";
 let lineIndex = 0;
