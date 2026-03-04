@@ -1,8 +1,12 @@
+// ==========================================
+// 1. データ定義（Scenario）
+// ==========================================
 const scenario = {
   Train: {
     lines: [
       "プロローグ",
-      "目覚まし時計の音で起き、無機質なスーツに身を包んでいつもの通勤電車に乗り込む。窓に映る自分の顔は、今日もどこかピンボケしているように見える。",
+      "目覚まし時計の音で起き、無機質なスーツに身を包んでいつもの通勤電車に乗り込む。",
+      "窓に映る自分の顔は、今日もどこかピンボケしているように見える。",
       "(今日も始まるのか...)",
       "今日も働いている広告代理店がある「青山一丁目」に向かいながら、SNSを開く。",
       "毎日自分の日常をSNSに書き込んでは、周りからの反応を心待ちにしているが今日もいいねは0だ。",
@@ -10,7 +14,8 @@ const scenario = {
       "（僕がいなくなっても、この電車も、会社も、世界も。何一つ変わらないんだろうな）",
       "吊り革を掴む自分の手が、心なしか透けて見えた気がした。",
       "そんなことを思いながら無情にも流れてくるのは見知らぬ誰かの輝かしい日常と、それに対する無数の「いいね」だけ。",
-      "受け入れ難い現実から目を背けるようにそっと目を閉じる。 ガタン、ゴトンという単調な振動が、子守唄のように意識を遠のかせていく。",
+      "受け入れ難い現実から目を背けるようにそっと目を閉じる。 ",
+      "ガタン、ゴトンという単調な振動が、子守唄のように意識を遠のかせていく。",
     ],
     san: 0,
     choices: [],
@@ -19,25 +24,29 @@ const scenario = {
   Glitch: {
     lines: [
       ".........どれくらい、眠っていただろうか。",
-      "突如、肌を刺すような静寂が訪れた。 電車の騒音も、他人の衣擦れも、スマホの操作音も、すべてが消えた。",
+      "突如、肌を刺すような静寂が訪れた。",
+      "電車の騒音も、他人の衣擦れも、スマホの操作音も、すべてが消えた。",
       "「……次は、赫山一丁目……赫山一丁目……」",
       "聞いたことのない、おぞましい響きの駅名。",
-      "跳ねるように目を開けると、車内には誰もいなかった。 あんなに密集していた乗客たちが、煙のように消え失せている。",
+      "跳ねるように目を開けると、車内には誰もいなかった。",
+      "あんなに密集していた乗客たちが、煙のように消え失せている。",
       "窓の外は、どろりとした赤黒い闇に包まれ、吊り革だけが、生き物のようにゆっくりと揺れていた。",
       "プシューッ……。",
-      "力なくドアが開く。 そこは、あなたの「日常」が完全に崩壊した場所。 赫山一丁目駅のホームだった。",
+      "力なくドアが開く。",
+      "そこは、あなたの「日常」が完全に崩壊した場所。 赫山一丁目駅のホームだった。",
     ],
     san: 0,
     choices: [],
     next: "Stage1",
   },
-  Stage1: {
+  Stage1: { 
     lines: [
       "ステージ1：赫山一丁目駅",
       "あなたはホームに降り立つ。",
       "見覚えがある。柱の位置、天井の高さ、広告の並び――",
       "タイルのひび割れ一つまで、毎朝見ている青山一丁目の光景そのものだ。",
-      "だが、決定的な違和感が全身を支配する。 広告ポスターの文字はインクが溶け出したように滲み、電光掲示板に時刻は表示されていない。",
+      "だが、決定的な違和感が全身を支配する。",
+      "広告ポスターの文字はインクが溶け出したように滲み、電光掲示板に時刻は狂っている。",
       "足音も、話し声も、聞こえない。",
       "空気が重い。音が、吸い込まれているようだ。",
       "「すみません……誰かいませんか？」",
@@ -177,7 +186,7 @@ const scenario = {
         san: -15,
         lines: [
           "「……近づかないでくれ」",
-          "一歩大きく身を引く。影がなく画面にも映らない存在を人間として扱うことなど、理性パ許さなかった。",
+          "一歩大きく身を引く。影がなく画面にも映らない存在を人間として扱うことなど、理性は許さなかった。",
           "「そう、あなたも私を拒絶するのね」彼女は追ってこようとはせず、ただ悲しげに首をかしげた。",
           "耐えがたいほどの沈黙。死ぬほど不気味なはずなのに、この気まずさと精神的疲労がじわじわと心を削っていく。",
           "SAN値が15減った。",
@@ -223,8 +232,9 @@ const scenario = {
       "最終ステージ：The choice is yours",
       "照明が狂ったように明滅し、前を歩いていた彼女が首をギチギチと回転させて振り向く。",
       "「……私、まだ『見られてる』……？」",
+      "彼女の肉体は文字の破片となって崩れ落ち、代わりに現れたのは数多の液晶画面を繋ぎ合わせたような歪な巨躯",
       {
-        text: "彼女の肉体は文字の破片となって崩れ落ち、代わりに現れたのは数多の液晶画面を繋ぎ合わせたような歪な巨躯――承認怪異《バズミア》。",
+        text: "――承認怪異――《バズミア》",
         img: "img-monster.png",
       },
       "「もっと……私を……拡散して！！」駅全体が激震し、スマホから数万件の通知音が鼓膜を突き破る。",
@@ -296,31 +306,37 @@ const scenario = {
       "赫山一丁目のホームに、また一つ新しい広告が貼り出される。微笑むあなたの顔。けれど、その瞳に光はない。",
       "------------------",
       "この世界は今日も待ち続ける。次に、自己承認欲求に飢えた, 孤独な誰かが迷い込んでくるのを。",
+      "〜完〜",
     ],
   },
   aliveEnding: {
     lines: [
       "「……あ、あ……っ！」",
-      "あなたの投稿が引き金となり、バズミアの巨体がノイズを撒き散らしながら内側から弾け飛ぶ。それと呼応するように、赫山一丁目駅全体が断末魔のような軋み声を上げ、激しい揺れと共に崩壊を始めた。",
+      "あなたの投稿が引き金となり、バズミアの巨体がノイズを撒き散らしながら内側から弾け飛ぶ。",
+      "それと呼応するように、赫山一丁目駅全体が断末魔のような軋み声を上げ、激しい揺れと共に崩壊を始めた。",
       "タイルが剥がれ、虚無の闇へと落下していく。ふと見ると、崩れゆく通路の先に、一箇所だけ白く輝く「改札」が見えた。",
       "「帰らなきゃ……元の世界に！」",
       "あなたは肺が焼けるような痛みも構わず、無我夢中になって走った。光り輝く改札機を飛び越え、その先の眩い奔流に身を投じる。",
       "「……次は……山……丁目……青山一丁目……」",
       "聞き慣れた、平坦で事務的なアナウンス。ハッと目を開けると、そこはベンチの上だった。いつもの、少し騒がしくて冷たい「青山一丁目」の光景。",
       "「夢……だったのか？」",
-      "体には、あのアスファルトの冷たさも、バズミアに掴まれた手の痛みも残っていない。だが、過剰な承認欲求は自己を蝕み、そこから生まれた行く当てのない憎悪が、あの異界を作り出していたことだけは、確信を持って理解できた。",
+      "体には、あのアスファルトの冷たさも、バズミアに掴まれた手の痛みも残っていない。",
+      "だが、過剰な承認欲求は自己を蝕み、そこから生まれた行く当てのない憎悪が、あの異界を作り出していたことだけは、確信を持って理解できた。",
       "ポケットの中のスマホが、狂ったように通知を刻んでいる。「遅刻だぞ。何時だと思っているんだ！」「おい、月次の資料はどうした！」",
-      "上司の市似さんからの鬼電と、無数の督促メッセージ。あなたは現実の重圧に溜息をつき、膝の震えを抑えて駅を飛び出し、会社へと走り出す。",
+      "上司の市似さんからの鬼電と、無数のメッセージ。あなたは歪な駅のことなど忘れ去り、会社へと走り出す。",
       "一瞬、SNSのおすすめ通知が目に入ったが、今はそんなことを気にしている余裕はない。",
       "-------------",
       "【本日のバズ投稿！】",
       "「なんか目が覚めたらよく分かんない駅にいるんだけどwww……」",
       "「……ここから出して」",
       "#赫山一丁目",
+      "〜完〜",
     ],
   },
 };
-
+// ==========================================
+// 2. 変数の宣言とDOM要素の取得
+// ==========================================
 const getTitleButton = document.querySelector(".start_game");
 const getTitle = document.querySelector(".title");
 const getGame = document.querySelector(".game");
@@ -330,16 +346,153 @@ const currentSanDisplay = document.querySelector("#currentSan");
 const currentStageDisplay = document.querySelector("#currentStage");
 const mainImage = document.querySelector("#mainImage");
 
-getTitle.addEventListener("click", () => {
-  getOverlay.classList.add("is_black");
-  setTimeout(() => {
-    getGame.classList.remove("not_active");
-    getTitle.classList.add("not_active");
-    getGame.classList.add("active");
-    getOverlay.classList.remove("is_black");
-  }, 600);
-});
+let currentStageId = "Train";
+let currentSan = 100;
+let mode = "story";
+let lineIndex = 0;
+let currentChoice = null;
+let isTyping = false;
+const displayText = document.createElement("p");
 
+// ==========================================
+// 3. ゲーム進行のメインロジック (Story & Choice)
+// ==========================================
+
+// 通常のストーリー進行
+async function advanceText() {
+  if (isTyping) return; //タイプライター演出中にクリックできないように制御
+  currentStageChange(); //画面上のステージ名変更
+  const textForm = getTextForm();
+  const currentStage = getCurrentStage();
+  const linesArray = getLinesArray();
+  const chara = getCharaImage();
+  const linesArrayDate = linesArray[lineIndex];
+  if (lineIndex < linesArray.length) { //セリフがまだ残っている際の処理
+    textForm.innerHTML = "";
+    textForm.appendChild(displayText);
+    let textToPrint = "";
+    if (typeof linesArrayDate === "object") { //画像表示させたいセリフはオブジェクトで管理
+      textToPrint = linesArrayDate.text;
+      if (linesArrayDate.img) { //imgを含んでいたら画像を表示。
+        chara.classList.remove("char-appear");
+        void chara.offsetWidth;
+        chara.src = linesArrayDate.img;
+        chara.classList.add("char-appear");
+      }
+    } else {
+      textToPrint = linesArrayDate;
+    }
+    await typeWriter(textToPrint, displayText); //テキストの表示
+    lineIndex++;
+  } else if (lineIndex === linesArray.length) { //セリフが全て表示された後の処理
+    if (currentStage.choices.length === 0) { //選択肢(choice)の表示がないオープニングとstage4用
+      lineIndex = 0;
+      currentStageId = currentStage.next;
+      currentSan += currentStage.san;
+      currentSanChange();
+      advanceText();
+      blackOut();
+    } else { //選択肢の表示があるステージ用
+      lineIndex = 0;
+      displayText.textContent = "";
+      mode = "choice"; //モード切り替え
+      showChoices();
+    }
+  }
+}
+
+// 選択肢の表示
+function showChoices() {
+  const textForm = getTextForm();
+  const choices = getChoices();
+  textForm.innerHTML = "";
+  choices.forEach((choice) => {//名選択肢で反復を回してボタンを作成、クリックされた選択肢に対してapplyChoices()を実行。
+    const displayButton = document.createElement("button");
+    displayButton.textContent = choice.label;
+    textForm.appendChild(displayButton);
+    displayButton.addEventListener("click", (e) => {
+      e.stopPropagation();//ボタンを押されると、advanceText()も反応するので、制御するための処理。
+      applyChoices(choice);
+    });
+  });
+}
+
+// 選択肢を選んだ後の処理
+function applyChoices(choice) {
+  currentChoice = choice;
+  lineIndex = 0;
+  mode = "choiceResult";//モードを切り替え
+  choiceResult();
+}
+
+// 選択肢の結果表示
+function choiceResult() {//advanceText()とほぼ同様の処理
+  if (isTyping) return;
+  const textForm = getTextForm();
+  textForm.innerHTML = "";
+  let textToPrint = "";
+  textForm.appendChild(displayText);
+  if (lineIndex < currentChoice.lines.length) {
+    textToPrint = currentChoice.lines[lineIndex];
+    typeWriter(textToPrint, displayText);
+    lineIndex++;
+  } else if (lineIndex === currentChoice.lines.length) {
+    currentSan += currentChoice.san;//SAN値の変化
+    currentSanChange();//変化したSAN値を描写
+    lineIndex = 0;
+    if (currentChoice.next === "ending") {
+      checkSan();//nextがendingだったら、ここでSAN値の判定に入る。
+    } else {
+      blackOut();//それ以外は暗転させてステージIDを切り替え。
+      currentStageId = currentChoice.next;
+    }
+    mode = "story";
+  }
+}
+
+// エンディング判定
+function checkSan() {
+  const chara = getCharaImage();
+  if (currentSan <= 0) {//SAN値が0以下ならロストエンド
+    currentStageId = "lostEnding";
+    blackOut();
+    chara.classList.add("hidden");
+    mode = "story";
+  } else {//SAN値が1以上で生還エンド
+    currentStageId = "aliveEnding";
+    blackOut();
+    chara.classList.add("hidden");
+    mode = "story";
+  }
+}
+
+// ==========================================
+// 4. 演出・補助用ツール (Utilities)
+// ==========================================
+
+// タイピング演出
+function typeWriter(text, element) {
+  return new Promise((resolve) => {
+    isTyping = true;
+    let i = 0;
+    element.textContent = "";
+    function nextChar() {
+      if (i < text.length) {
+        element.textContent += text[i];
+        i++;
+        setTimeout(() => {
+          nextChar();
+        }, 30);
+      } else {
+        isTyping = false;
+        resolve();
+      }
+    }
+    nextChar();
+  });
+}
+
+// 画面暗転（ブラックアウト）
 function blackOut() {
   getOverlay.classList.add("is_black");
   setTimeout(() => {
@@ -348,19 +501,14 @@ function blackOut() {
   }, 600);
 }
 
+// 背景切り替え
 function changeBg() {
   mainImage.classList.remove();
   mainImage.classList = "bg-" + currentStageId;
   console.log(mainImage.classList);
 }
 
-let currentStageId = "Train";
-let currentSan = 100;
-let mode = "story";
-let lineIndex = 0;
-let currentChoice = null;
-const displayText = document.createElement("p");
-
+// ステータス表示更新
 function currentSanChange() {
   currentSanDisplay.textContent = currentSan;
 }
@@ -374,6 +522,7 @@ function resetDisplay() {
   textForm.innerHTML = "";
 }
 
+// データ取得用ショートカット
 function getCurrentStage() {
   return scenario[currentStageId];
 }
@@ -388,47 +537,7 @@ function getTextForm() {
 }
 
 function getCharaImage() {
-  const charaImage = document.querySelector(".character");
-  return charaImage;
-}
-
-function advanceText() {
-  currentStageChange();
-  const textForm = getTextForm();
-  const currentStage = getCurrentStage();
-  const linesArray = getLinesArray();
-  const chara = getCharaImage();
-  const linesArrayDate = linesArray[lineIndex];
-  if (lineIndex < linesArray.length) {
-    if (typeof linesArrayDate === "object") {
-      displayText.textContent = linesArrayDate.text;
-      textForm.appendChild(displayText);
-      if (linesArrayDate.img) {
-        chara.classList.remove("char-appear");
-        void chara.offsetWidth;
-        chara.src = linesArrayDate.img;
-        chara.classList.add("char-appear");
-      }
-    } else {
-      displayText.textContent = linesArrayDate;
-      textForm.appendChild(displayText);
-    }
-    lineIndex++;
-  } else if (lineIndex === linesArray.length) {
-    if (currentStage.choices.length === 0) {
-      lineIndex = 0;
-      currentStageId = currentStage.next;
-      currentSan += currentStage.san;
-      currentSanChange();
-      advanceText();
-      blackOut();
-    } else {
-      lineIndex = 0;
-      displayText.textContent = "";
-      mode = "choice";
-      showChoices();
-    }
-  }
+  return document.querySelector(".character");
 }
 
 function getChoices() {
@@ -436,65 +545,23 @@ function getChoices() {
   return currentStage["choices"];
 }
 
-function applyChoices(choice) {
-  currentChoice = choice;
-  lineIndex = 0;
-  mode = "choiceResult";
-  choiceResult();
-}
+// ==========================================
+// 5. イベントリスナー（実行のトリガー）
+// ==========================================
 
-function showChoices() {
-  const textForm = getTextForm();
-  const choices = getChoices();
-  textForm.innerHTML = "";
-  choices.forEach((choice) => {
-    const displayButton = document.createElement("button");
-    displayButton.textContent = choice.label;
-    textForm.appendChild(displayButton);
-    displayButton.addEventListener("click", (e) => {
-      e.stopPropagation();
-      applyChoices(choice);
-    });
-  });
-}
+// タイトル画面のクリック（ゲーム開始）
+getTitle.addEventListener("click", () => {//クリックすることでタイトルがdisplay:noneになり、ゲーム画面がdisplay:blockになる。
+  getOverlay.classList.add("is_black");
+  setTimeout(() => {
+    getGame.classList.remove("not_active");
+    getTitle.classList.add("not_active");
+    getGame.classList.add("active");
+    getOverlay.classList.remove("is_black");
+  }, 600);
+});
 
-function choiceResult() {
-  const textForm = getTextForm();
-  textForm.innerHTML = "";
-  if (lineIndex < currentChoice.lines.length) {
-    displayText.textContent = currentChoice.lines[lineIndex];
-    textForm.appendChild(displayText);
-    lineIndex++;
-  } else if (lineIndex === currentChoice.lines.length) {
-    currentSan += currentChoice.san;
-    currentSanChange();
-    lineIndex = 0;
-    if (currentChoice.next === "ending") {
-      checkSan();
-    } else {
-      blackOut();
-      currentStageId = currentChoice.next;
-    }
-    mode = "story";
-  }
-}
-
-function checkSan() {
-  const chara = getCharaImage();
-  if (currentSan <= 0) {
-    currentStageId = "lostEnding";
-    blackOut();
-    chara.classList.add("hidden");
-    mode = "story";
-  } else {
-    currentStageId = "aliveEnding";
-    blackOut();
-    chara.classList.add("hidden");
-    mode = "story";
-  }
-}
-
-getTextForm().addEventListener("click", () => {
+// テキストフォームのクリック（読み進め）
+getTextForm().addEventListener("click", () => { //ゲームのエンジン部分。各モードの切り替えで動作させている。
   if (mode === "story") {
     advanceText();
   } else if (mode === "choice") {
